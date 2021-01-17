@@ -14,7 +14,7 @@ const UserTypeScreen = ({ navigation }) => {
       <View>
         <Text style={styles.text}>
           مرحبا بك في برنامج كتاتيب بوابة التواصل بين المحفظين و المتعلميين
-          للقرأن الكريم{" "}
+          للقرأن الكريم
         </Text>
         <Text style={styles.text}>اختر نوع الحساب</Text>
       </View>

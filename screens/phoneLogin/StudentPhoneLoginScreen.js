@@ -1,14 +1,25 @@
-import React from "react";
-import { StyleSheet, Text, View, ImageBackground, Image } from "react-native";
+import React, { useState } from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  ImageBackground,
+  Image,
+  TouchableOpacity,
+  TextInput,
+} from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
-import ForgetPass from "../components/forgetPass";
-import GmailBottom from "../components/gmailAccount";
-import EmailForm from "../components/emailFormComponent";
-const TeacherLoginScreen = () => {
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import ForgetPass from "../../components/forgetPass";
+import GmailBottom from "../../components/gmailAccount";
+import EmailForm from "../../components/emailFormComponent";
+const StudentLoginScreen = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   return (
     <View>
       <ImageBackground
-        source={require("../assets/images/bglogin.png")}
+        source={require("../../assets/images/bglogin.png")}
         style={styles.bgImage}
       >
         <View style={styles.logo}>
@@ -23,18 +34,19 @@ const TeacherLoginScreen = () => {
           </View>
         </View>
 
-        <Image source={require("../assets/images/logologinuser.png")} />
+        <Image source={require("../../assets/images/logologinuser.png")} />
         <View style={styles.formView}>
+        
           <EmailForm />
-          {/* <ForgetPass /> */}
-          {/* <GmailBottom /> */}
+          <ForgetPass />
+          <GmailBottom />
         </View>
       </ImageBackground>
     </View>
   );
 };
 
-export default TeacherLoginScreen;
+export default StudentLoginScreen;
 
 const styles = StyleSheet.create({
   bgImage: {
@@ -56,7 +68,7 @@ const styles = StyleSheet.create({
   },
   loginForm: {
     backgroundColor: "white",
-    height: "250",
+    height: "300",
     width: "150",
   },
   formView: {
@@ -65,7 +77,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     padding: 15,
     borderRadius: 20,
-    height: "52%",
+    height: "68%",
     width: 300,
   },
 });

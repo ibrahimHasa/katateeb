@@ -4,9 +4,15 @@ import { createAppContainer } from "react-navigation";
 import UserTypeScreen from "./screens/UserTypeScreen";
 import StudentLoginScreen from "./screens/StudentLoginScreen";
 import TeacherLoginScreen from "./screens/TeacherLoginScreen";
+import TeacherPhoneLoginScreen from "./screens/phoneLogin/TeacherPhoneLoginScreen";
+import SessionsScreen from "./screens/MySessionsScreen";
 
+import MySessions from "./screens/mySessions/MySessions";
+import ProfileScreen from "./screens/ProfileScreen";
 const navigator = createStackNavigator(
   {
+    Sessions: MySessions,
+    Profile: ProfileScreen,
     UserType: UserTypeScreen,
     StudentLogin: StudentLoginScreen,
     TeacherLogin: TeacherLoginScreen,
@@ -21,25 +27,3 @@ const navigator = createStackNavigator(
 );
 
 export default createAppContainer(navigator);
-
-// import { StatusBar } from 'expo-status-bar';
-// import React from 'react';
-// import { StyleSheet, Text, View } from 'react-native';
-
-// export default function App() {
-//   return (
-//     <View style={styles.container}>
-//       <Text>Open up App.js to start working on your app!</Text>
-//       <StatusBar style="auto" />
-//     </View>
-//   );
-// }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });
